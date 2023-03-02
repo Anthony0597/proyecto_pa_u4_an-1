@@ -5,13 +5,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.modelo.Persona;
 import com.example.demo.repo.IPersonaRepo;
+import com.example.demo.repo.modelo.Persona;
+
 @Service
 public class PersonaServiceImpl implements IPersonaService {
 
 	@Autowired
-	IPersonaRepo personaRepo;
+	private IPersonaRepo personaRepo;
 	
 	@Override
 	public void guardar(Persona persona) {

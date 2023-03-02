@@ -2,7 +2,7 @@ package com.example.demo.repo;
 
 import java.util.List;
 
-import com.example.demo.modelo.Persona;
+import com.example.demo.repo.modelo.Persona;
 
 public interface IPersonaRepo {
 	public void insertar(Persona persona);
@@ -10,4 +10,4 @@ public interface IPersonaRepo {
 	public void eliminar(Integer id);
 	public List<Persona> buscar();
 	public Persona buscarPorId(Integer id);
-	}
+}

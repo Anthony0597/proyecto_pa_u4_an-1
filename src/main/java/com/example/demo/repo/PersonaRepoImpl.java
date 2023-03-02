@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.modelo.Persona;
+import com.example.demo.repo.modelo.Persona;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;

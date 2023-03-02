@@ -2,7 +2,7 @@ package com.example.demo.service;
 
 import java.util.List;
 
-import com.example.demo.modelo.Persona;
+import com.example.demo.repo.modelo.Persona;
 
 public interface IPersonaService {
 	public void guardar(Persona persona);

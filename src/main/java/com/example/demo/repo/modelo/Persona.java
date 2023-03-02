@@ -1,24 +1,35 @@
-package com.example.demo.modelo;
+package com.example.demo.repo.modelo;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "persona")
 public class Persona {
+	
 	@Id
+	@SequenceGenerator(name = "pers_id_seq",sequenceName = "pers_id_seq", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pers_id_seq")
 	@Column(name = "pers_id")
 	private Integer id;
+	
 	@Column(name = "pers_nombre")
-	private String nomber;
+	private String nombre;
+	
 	@Column(name = "pers_apellido")
 	private String apellido;
+	
 	@Column(name = "pers_cedula")
 	private String cedula;
+	
 	@Column(name = "pers_genero")
 	private String genero;	
+	
 	//GET Y SET
 	public Integer getId() {
 		return id;
@@ -26,11 +37,11 @@ public class Persona {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getNomber() {
-		return nomber;
+	public String getNombre() {
+		return nombre;
 	}
-	public void setNomber(String nomber) {
-		this.nomber = nomber;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 	public String getApellido() {
 		return apellido;
@@ -52,7 +63,7 @@ public class Persona {
 	}
 	@Override
 	public String toString() {
-		return "Persona [id=" + id + ", nomber=" + nomber + ", apellido=" + apellido + ", cedula=" + cedula
+		return "Persona [id=" + id + ", nomber=" + nombre + ", apellido=" + apellido + ", cedula=" + cedula
 				+ ", genero=" + genero + "]";
 	}
 	
